@@ -1,12 +1,8 @@
 const listaTarefas = document.getElementById('lista-tarefas');
 
-
 const tituloInput = document.getElementById('titulo');
-
 const inicioInput = document.getElementById('inicio');
-
 const entregaInput = document.getElementById('entrega');
-
 
 const prioridadeInput = document.getElementById('prioridade');
 
