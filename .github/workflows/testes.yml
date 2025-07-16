@@ -1,4 +1,4 @@
-name: Testes Automatizados com Gradle
+name: Testes Backend com Gradle
 
 on:
   push:
@@ -7,20 +7,20 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  backend-tests:
     runs-on: ubuntu-latest
 
     steps:
       - name: Clonar repositório
         uses: actions/checkout@v3
 
-      - name: Instalar Java
+      - name: Configurar Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Dar permissão ao Gradle
+      - name: Permitir execução do Gradle
         run: chmod +x gradlew
 
       - name: Rodar testes
