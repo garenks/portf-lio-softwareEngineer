@@ -68,9 +68,10 @@ async function adicionarOuEditarTarefa() {
   }
 
   const tarefa = { titulo, descricao, prioridade };
-
   try {
     let url, method;
+
+    
     if (tarefaEditandoId) {
       url = `http://localhost:8080/api/tarefas/atualizarTarefa/${tarefaEditandoId}`;
       method = 'PUT';
