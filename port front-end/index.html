@@ -11,19 +11,16 @@
 
   <div class="task-form">
     <input type="text" id="titulo" placeholder="Título da tarefa">
-    <input type="date" id="inicio">
-    <input type="date" id="entrega">
+    <textarea id="descricao" placeholder="Descrição da tarefa" rows="4"></textarea>
     <select id="prioridade">
       <option value="Alta">Alta</option>
       <option value="Média">Média</option>
       <option value="Baixa">Baixa</option>
     </select>
-    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+    <button id="botao-adicionar" onclick="adicionarOuEditarTarefa()">Adicionar Tarefa</button>
   </div>
 
-  <div class="task-list" id="lista-tarefas">
-
-  </div>
+  <div class="task-list" id="lista-tarefas"></div>
 
   <script src="js/script.js"></script>
 </body>
