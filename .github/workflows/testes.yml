@@ -1,0 +1,27 @@
+name: Testes Automatizados com Gradle
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Dar permissão ao Gradle
+        run: chmod +x gradlew
+
+      - name: Rodar testes
+        run: ./gradlew test
