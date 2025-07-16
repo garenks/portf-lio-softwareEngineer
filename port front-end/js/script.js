@@ -1,7 +1,6 @@
 const listaTarefas = document.getElementById('lista-tarefas');
 const tituloInput = document.getElementById('titulo');
-const inicioInput = document.getElementById('inicio');
-const entregaInput = document.getElementById('entrega');
+const descricaoInput = document.getElementById('descricao');
 const prioridadeInput = document.getElementById('prioridade');
 
 let tarefaEditandoId = null;
@@ -27,10 +26,7 @@ function criarElementoTarefa(tarefa) {
   const detalhes = document.createElement('div');
   detalhes.className = 'task-details';
 
-  const inicioFormatado = formatarData(tarefa.dataCriacao);
-  const fimFormatado = formatarData(tarefa.dataConclusao);
-
-  detalhes.innerHTML = `<strong>${tarefa.titulo}</strong><br>Início: ${inicioFormatado} | Entrega: ${fimFormatado} | Prioridade: ${tarefa.prioridade}`;
+  detalhes.innerHTML = `<strong>${tarefa.titulo}</strong><br>${tarefa.descricao}<br>Prioridade: ${tarefa.prioridade}`;
 
   const acoes = document.createElement('div');
   acoes.className = 'task-actions';
@@ -56,31 +52,22 @@ function criarElementoTarefa(tarefa) {
 function carregarParaEdicao(tarefa) {
   tarefaEditandoId = tarefa.id;
   tituloInput.value = tarefa.titulo;
-  inicioInput.value = formatarData(tarefa.dataCriacao);
-  entregaInput.value = formatarData(tarefa.dataConclusao);
+  descricaoInput.value = tarefa.descricao;
   prioridadeInput.value = tarefa.prioridade;
   document.getElementById('botao-adicionar').textContent = 'Salvar Alterações';
 }
 
 async function adicionarOuEditarTarefa() {
   const titulo = tituloInput.value;
-  const dataCriacao = inicioInput.value;
-  const dataConclusao = entregaInput.value;
+  const descricao = descricaoInput.value;
   const prioridade = prioridadeInput.value;
 
-  if (!titulo || !dataCriacao || !dataConclusao) {
-    alert('Preencher todos os campos!');
+  if (!titulo || !descricao) {
+    alert('Preencha todos os campos!');
     return;
   }
 
-  const tarefa = {
-    titulo,
-    dataCriacao: formatarParaEnvioData(dataCriacao),
-    dataConclusao: formatarParaEnvioData(dataConclusao),
-    prioridade
-  };
-
-  console.log("Enviando tarefa:", JSON.stringify(tarefa)); // debug
+  const tarefa = { titulo, descricao, prioridade };
 
   try {
     let url, method;
@@ -114,20 +101,28 @@ async function adicionarOuEditarTarefa() {
   }
 }
 
+async function deletarTarefa(id) {
+  if (!confirm('Tem certeza que deseja excluir esta tarefa?')) return;
 
+  try {
+    const response = await fetch(`http://localhost:8080/api/tarefas/deletarTarefa/${id}`, {
+      method: 'DELETE',
+    });
 
-function formatarData(dataStr) {
-  const data = new Date(dataStr);
-  const ano = data.getFullYear();
-  const mes = String(data.getMonth() + 1).padStart(2, '0');
-  const dia = String(data.getDate()).padStart(2, '0');
-  return `${ano}-${mes}-${dia}`;
+    if (response.ok) {
+      carregarTarefas();
+    } else {
+      console.error('Erro ao deletar:', await response.text());
+    }
+  } catch (error) {
+    console.error('Erro ao deletar tarefa:', error);
+  }
 }
 
-function formatarParaEnvioData(dataStr) {
-  const data = new Date(dataStr);
-  return data.toISOString().split('T')[0]; // força o formato yyyy-MM-dd
+function limparFormulario() {
+  tituloInput.value = '';
+  descricaoInput.value = '';
+  prioridadeInput.value = 'Média';
 }
-
 
 carregarTarefas();
