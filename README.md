@@ -78,6 +78,23 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 ---
 
+### Requisitos Funcionais:
+1. Prover **tela de gerenciamento de tarefas**.
+2. Prover **campo de tarefa**.
+3. Prover **botão "Adicionar nova tarefa"**.
+4. Prover **botão "Alterar tarefa"**.
+5. Prover **botão "Deletar tarefa"**.
+6. Prover **campo com o título da tarefa**.
+7. Prover **campo de descrição**.
+8. Prover **campo com a prioridade da tarefa**.
+
+### Requisitos Não Funcionais:
+1. Prover **usabilidade** para facilitar a interação do usuário com o sistema.
+2. Prover **conexão estável com o banco de dados** para garantir o armazenamento e recuperação confiável das tarefas.
+
+
+---
+
 ### Metodologia Utilizada
 **Kanban:**
 Foi utilizado um quadro **Kanban** na aba **Projects** do GitHub para visualizar o progresso das tarefas de forma clara e organizada. As tarefas foram separadas em colunas como:
