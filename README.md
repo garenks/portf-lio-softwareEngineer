@@ -1,12 +1,12 @@
 # 📌 Projeto Ágil com GitHub: Sistema de Gerenciamento de Tarefas
 
-Este projeto simula o desenvolvimento de um sistema de gerenciamento de tarefas, com foco no aprendizado e prática de conceitos fundamentais de backend. O objetivo é permitir o cadastro, visualização, atualização e exclusão de tarefas, com integração ao banco de dados relacional MySQL. A estrutura segue boas práticas de organização, versionamento com GitHub e metodologias ágeis.
+Este projeto simula o desenvolvimento de um sistema de gerenciamento de tarefas, com foco no aprendizado e prática de conceitos fundamentais de backend. O objetivo é permitir o cadastro, visualização, atualização e exclusão de tarefas, com integração ao banco de dados relacional MySQL. 
 
 ---
 
 ## Objetivo
 
-Criar um sistema completo de gerenciamento de tarefas utilizando Java com Spring Boot no backend e MySQL para persistência dos dados, oferecendo uma base sólida para controle e organização de tarefas de forma eficiente.
+Fazer a criação de um sistema completo de gerenciamento de tarefas utilizando Java com Spring Boot no backend e MySQL para persistência dos dados, oferecendo uma base sólida para controle e organização de tarefas de forma eficiente.
 
 ---
 
@@ -16,7 +16,7 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 ---
 
-## Tecnologias Utilizadas e Justificativa
+## Tecnologias Utilizadas e suas Justificativa
 
 ### BACKEND
 
@@ -27,18 +27,10 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 ### FRONT-END
 
-- **Abra o diretório do projeto no seu editor de código.**
-
-- **Vá até a pasta "port frontend/" onde estão os arquivos .html, .css e .js**
-
-- **Atualizar os dados de uma tarefa.**
-
-- **Deletar uma tarefa.**
-
-- **Execute o arquivo index.html diretamente no navegador.**
-
-- **Certifique-se de que o backend esteja rodando para que o frontend consiga buscar os dados corretamente.**
-
+- **Html**: Utilizado para estruturar a pagina.
+- **CSS**: Responsável pela aparência e layout da interface do projeto.
+- **JavaScript**:  Usado para adicionar interatividade ao sistema, como capturar eventos do usuário, fazer requisições à API usando fetch.
+  
 ---
 
 ## Como Iniciar o Projeto?
@@ -57,6 +49,21 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 3. **Clone o repositório e acesse o diretório:**
    `git clone https://github.com/garenks/portf-lio-softwareEngineer.git`
+
+
+### FRONT-END
+
+- **Abra o diretório do projeto no seu editor de código.**
+
+- **Vá até a pasta "port frontend/" onde estão os arquivos .html, .css e .js**
+
+- **Atualizar os dados de uma tarefa.**
+
+- **Deletar uma tarefa.**
+
+- **Execute o arquivo index.html diretamente no navegador.**
+
+- **Certifique-se de que o backend esteja rodando para que o frontend consiga buscar os dados corretamente.**
 
 ---
 
