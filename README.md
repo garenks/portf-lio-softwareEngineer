@@ -4,7 +4,7 @@ Este projeto simula o desenvolvimento de um sistema de gerenciamento de tarefas,
 
 ---
 
-## 🟪 Objetivo
+## Objetivo
 
 Criar um sistema completo de gerenciamento de tarefas utilizando Java com Spring Boot no backend e MySQL para persistência dos dados, oferecendo uma base sólida para controle e organização de tarefas de forma eficiente.
 
