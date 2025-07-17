@@ -22,8 +22,6 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 - **Java + Spring Boot**: Framework robusto, produtivo e amplamente utilizado no mercado para desenvolvimento de APIs REST.
 - **MySQL**: Banco de dados relacional utilizado para armazenar as tarefas de forma estruturada.
-- **Spring Data JPA**: Facilita a integração com o banco de dados usando ORM.
-- **Lombok**: Reduz a verbosidade do código com anotações simples.
 - **Gradle**: Gerenciador de dependências e build do projeto.
 - **GitHub Actions**: Utilizado para testes automatizados.
 
