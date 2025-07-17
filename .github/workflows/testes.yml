@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repositório
+      - name: Clonar o repositório
         uses: actions/checkout@v3
 
-      - name: Configurar Java
+      - name: Configurar o Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Permitir execução do Gradle
+      - name: Dar permissão ao Gradle
         run: chmod +x gradlew
 
       - name: Rodar testes
