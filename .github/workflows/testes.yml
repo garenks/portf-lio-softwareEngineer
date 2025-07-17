@@ -21,7 +21,9 @@ jobs:
           java-version: '17'
 
       - name: Dar permissão ao Gradle
+        working-directory: back-end
         run: chmod +x gradlew
 
       - name: Rodar testes
+        working-directory: back-end
         run: ./gradlew test
