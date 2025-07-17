@@ -12,13 +12,13 @@ Criar um sistema completo de gerenciamento de tarefas utilizando Java com Spring
 
 ## Conceito do Projeto
 
-O projeto está estruturado para simular uma aplicação real, com foco no backend, podendo ser facilmente conectado a um frontend posteriormente. O desenvolvimento está baseado em boas práticas de engenharia de software, testes automatizados e organização por meio do GitHub Projects (Kanban).
+O projeto está estruturado para simular uma aplicação real, com foco no backend. O desenvolvimento está baseado em boas práticas de engenharia de software, testes automatizados e organização por meio do GitHub Projects (Kanban).
 
 ---
 
 ## Tecnologias Utilizadas e Justificativa
 
-### 🔙 BACKEND
+### BACKEND
 
 - **Java + Spring Boot**: Framework robusto, produtivo e amplamente utilizado no mercado para desenvolvimento de APIs REST.
 - **MySQL**: Banco de dados relacional utilizado para armazenar as tarefas de forma estruturada.
@@ -26,6 +26,20 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 - **Lombok**: Reduz a verbosidade do código com anotações simples.
 - **Gradle**: Gerenciador de dependências e build do projeto.
 - **GitHub Actions**: Utilizado para testes automatizados.
+
+### FRONT-END
+
+- **Abra o diretório do projeto no seu editor de código.**
+
+- **Vá até a pasta "port frontend/" onde estão os arquivos .html, .css e .js**
+
+- **Atualizar os dados de uma tarefa.**
+
+- **Deletar uma tarefa.**
+
+- **Execute o arquivo index.html diretamente no navegador.**
+
+- **Certifique-se de que o backend esteja rodando para que o frontend consiga buscar os dados corretamente.**
 
 ---
 
@@ -44,4 +58,25 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
    spring.datasource.password=sua_senha
 
 3. **Clone o repositório e acesse o diretório:**
-   
+   `git clone https://github.com/garenks/portf-lio-softwareEngineer.git`
+
+---
+
+### Funcionalidades CRUD Implementadas
+- **Criar uma nova tarefa.**
+
+- **Listar todas as tarefas existentes.**
+
+- **Atualizar os dados de uma tarefa.**
+
+- **Deletar uma tarefa.**
+
+---
+
+### Metodologia Utilizada
+**Kanban:**
+Foi utilizado um quadro **Kanban** na aba **Projects** do GitHub para visualizar o progresso das tarefas de forma clara e organizada. As tarefas foram separadas em colunas como:
+- **A Fazer**
+- **Em Progresso**
+- **Concluído**
+---
