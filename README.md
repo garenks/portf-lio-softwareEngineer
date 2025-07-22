@@ -78,7 +78,7 @@ O projeto está estruturado para simular uma aplicação real, com foco no backe
 
 ---
 
-### Requisitos Funcionais:
+Gestão de Mudanças
 1. Prover **tela de gerenciamento de tarefas**.
 2. Prover **campo de tarefa**.
 3. Prover **botão "Adicionar nova tarefa"**.
@@ -102,3 +102,6 @@ Foi utilizado um quadro **Kanban** na aba **Projects** do GitHub para visualizar
 - **Em Progresso**
 - **Concluído**
 ---
+
+### Gestão de Mudanças
+Foi realizado uma alteração no escopo do projeto, onde seria introduzido no painel de gerenciamento de tarefas um input para data inicial e outro input para prazo máximo.
