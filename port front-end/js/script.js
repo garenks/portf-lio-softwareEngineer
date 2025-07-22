@@ -50,12 +50,13 @@ function criarElementoTarefa(tarefa) {
 }
 
 function carregarParaEdicao(tarefa) {
-  tarefaEditandoId = tarefa.id;
+  tarefaEditandoId = tarefa.id || null;
   tituloInput.value = tarefa.titulo;
   descricaoInput.value = tarefa.descricao;
   prioridadeInput.value = tarefa.prioridade;
   document.getElementById('botao-adicionar').textContent = 'Salvar Alterações';
 }
+
 
 async function adicionarOuEditarTarefa() {
   const titulo = tituloInput.value;
