@@ -22,13 +22,10 @@ public class Tarefa {
     public Tarefa() {
     }
 
-    public int getId() {
-        return id;
+    public Tarefa(Object o, String minhaTarefaDeTeste) {
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public String getTitulo() {
         return titulo;
@@ -48,6 +45,14 @@ public class Tarefa {
 
     public String getPrioridade() {
         return prioridade;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setPrioridade(String prioridade) {
